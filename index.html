@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A gentle hush</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    
+  <div class="bg"></div>
+
+  <main class="shell">
+    <h1 class="heading">A Message Just for You</h1>
+
+    <section class="grid">
+      
+      <div class="card">
+        <h2>Only for Your Ears</h2>
+        <audio controls class="audio">
+          <source src="voice3.mp3" type="audio/mpeg"/>
+        </audio>
+        
+      </div>
+
+      <div class="card">
+        <h2>The Thoughts I Never Say Aloud</h2>
+        <button id="noteBtn" class="btn">Show / Hide</button>
+        <p id="note" class="note hidden">
+          you just really inspire me to be a better person
+        </p>
+      </div>
+    </section>
+
+    
+    <section class="card wide">
+      <h2>Whisper Me</h2>
+
+      <form action="https://formspree.io/f/mandbdky" method="POST" class="review-form">
+        
+        <textarea name="message" placeholder="Leave a message" maxlength="500" required></textarea>
+        <button type="submit" class="btn">Whisper</button>
+         
+       
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
