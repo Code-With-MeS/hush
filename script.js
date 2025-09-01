@@ -1,9 +1,7 @@
-// Toggle weekly note
+
 document.getElementById("noteBtn").addEventListener("click", () => {
   document.getElementById("note").classList.toggle("hidden");
 });
-
-// Load existing reviews on page load
 async function loadReviews(){
   try{
     const res = await fetch("review.php");
@@ -35,7 +33,6 @@ function escapeHTML(s){
   return (s||"").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
-// Submit new review
 document.getElementById("reviewForm").addEventListener("submit", async (e)=>{
   e.preventDefault();
   const status = document.getElementById("status");
@@ -55,6 +52,4 @@ document.getElementById("reviewForm").addEventListener("submit", async (e)=>{
     status.textContent = "Network error. Please try again.";
   }
 });
-
-// init
 loadReviews();
